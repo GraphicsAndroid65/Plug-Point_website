@@ -27,7 +27,7 @@ Plug Point is a modern, user-friendly platform designed to help electric vehicle
 - Existing users can sign in to manage their accounts and payments.
 
 # Technologies Used
-- Frontend: HTML, CSS (Tailwind CSS), JavaScript
+- Frontend: HTML, CSS, JavaScript
 
 - OpenStreetMap : For displaying the interactive map and charging station locations.
 
