@@ -29,13 +29,23 @@ Plug Point is a modern, user-friendly platform designed to help electric vehicle
 # Technologies Used
 - Frontend: HTML, CSS (Tailwind CSS), JavaScript
 
-- Google Maps API: For displaying the interactive map and charging station locations.
+- OpenStreetMap : For displaying the interactive map and charging station locations.
 
-- Font Awesome: For icons used throughout the website.
+- Images : To Display Icons & Images on website (Assets)
 
 - Google Fonts: For custom typography (Inter and Raleway fonts).
 
-- Tailwind CSS: For utility-first CSS styling and responsive design.
+- CSS: For utility-first CSS styling and responsive design.
 
-- JavaScript: For interactive elements, such as modals, animations, and form handling.
+- JavaScript: For interactive elements, such as modals, animations, map and form handling.
 
+## Developers
+
+This project was proudly developed by:
+
+- **Mangesh Choudhary**
+- **Sumit Kumar**
+
+## Acknowledgments
+
+We would like to thank our college and instructor for guiding us through the Web Technology subject and giving us the opportunity to learn by creating this project.
