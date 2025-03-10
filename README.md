@@ -46,7 +46,7 @@ This project was proudly developed by:
 - **Mangesh Choudhary**
 - **Sumit Kumar**
 
-# 🌟 Key Features:
+## 🌟 Key Features:
 
 Find nearby charging stations with real-time location data.
 
@@ -58,7 +58,7 @@ User reviews and detailed station information.
 
 Responsive design for mobile and desktop.
 
-# 🌱 Mission:
+## 🌱 Mission:
 Plug Point is committed to promoting sustainable transportation by making EV charging more accessible and convenient for everyone.
 
 📧 Contact:
