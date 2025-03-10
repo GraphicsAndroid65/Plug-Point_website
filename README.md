@@ -1,7 +1,8 @@
-Plug Point - Electric Vehicle Charging Station Finder
+#Plug Point - Electric Vehicle Charging Station Finder
+
 Plug Point is a modern, user-friendly platform designed to help electric vehicle (EV) owners locate, book, and pay for charging stations with ease. The website provides a comprehensive directory of EV charging stations, along with detailed information about each station, including availability, pricing, and charging speeds. Whether you're at home, work, or on the go, Plug Point ensures that you can always find a charging station nearby.
 
-Features
+# Features
 1. Find Charging Stations
 Nearby Stations: Quickly locate the nearest charging stations to your current location.
 
