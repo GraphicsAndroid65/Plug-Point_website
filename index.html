@@ -1,0 +1,292 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0"/>
+    <title>Electric Vehicle</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Raleway:wght@700&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body class="bg-gray-100 text-white">
+    <!-- Header -->
+    <header class="bg-black text-white w-full">
+        <div class="flex justify-between items-center py-4 px-6 w-full">
+            <div class="flex items-center space-x-3">
+                <img alt="Electric Vehicle Logo" height="50" src="https://storage.googleapis.com/a1aa/image/uCBxhX_HPgGe8rv2jy3hGKa1kjNptGeQL0vjy8BLj-A.jpg" width="50"/>
+                <span class="text-lg font-bold">Plug Point</span>
+            </div>
+            <nav class="hidden md:flex space-x-6 mx-auto">
+                <a class="text-white hover:text-green-500" href="#">Home</a>
+                <a class="text-white hover:text-green-500" href="#">Booking</a>
+                <a class="text-white hover:text-green-500" href="#">Find a Station</a>
+                <a class="text-white hover:text-green-500" href="Links/payment.html">Payment</a>
+                <a class="text-white hover:text-green-500" href="Links/aboutus.html">About Us</a>
+            </nav>
+            <a class="btn-animated" href="Links/signin.html">Sign In</a>
+        </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="relative">
+        <div class="image-container">
+            <img alt="Electric car being charged" class="zoom-animation active" src="https://storage.googleapis.com/a1aa/image/kitasNiQuiZpvFFnRan3--ux8UtbTn8StSNZRKrYT1k.jpg"/>
+            <img alt="Electric car charging station" class="zoom-animation" src="https://storage.googleapis.com/a1aa/image/a8QHjeZuo9hVK00oqUrbHeTrmkwUlJINTbhlVFi_BPI.jpg"/>
+            <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-start items-start p-10 h-full">
+                <p class="text-green-500 text-sm uppercase mb-2 mt-4 fade-in">Modern electric vehicle charging systems</p>
+                <h1 class="text-white font-bold heading extra-large mt-2 slide-in-left">Electric Car Charging Points</h1>
+                <div class="absolute bottom-10 right-10">
+                    <p class="text-white tagline">PLUG IN , charge up.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- New Content Section -->
+    <section class="gradient-bg text-white py-10">
+        <div class="container mx-auto">
+            <div class="text-center">
+                <p class="text-green-500 uppercase tracking-widest">Electric vehicle</p>
+                <h1 class="title">Driving Tomorrow Today: The Electric Evolution</h1>
+                <p class="description">Practices such as avoiding occupying a charging space longer than necessary, adhering to posted time limits, and being mindful of charging station etiquette can help ensure.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+                <div class="card bg-gray-800 text-white p-6 rounded-lg shadow-lg hover-card">
+                    <i class="fas fa-charging-station icon text-green-500"></i>
+                    <h3 class="card-title">High Quality Stations</h3>
+                    <p class="card-description">Workplace charging not only supports employees who drive electric cars</p>
+                    <a class="card-link" href="#">Read More</a>
+                </div>
+                <div class="card bg-gray-800 text-white p-6 rounded-lg shadow-lg hover-card">
+                    <i class="fas fa-tools icon text-green-500"></i>
+                    <h3 class="card-title">Quick Installations</h3>
+                    <p class="card-description">Many electric utilities offer incentives or rebates to encourage the installation</p>
+                    <a class="card-link" href="#">Read More</a>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+                <div class="card bg-gray-800 text-white p-6 rounded-lg shadow-lg hover-card">
+                    <i class="fas fa-store icon text-green-500"></i>
+                    <h3 class="card-title">Accessories Store</h3>
+                    <p class="card-description">As electric cars become increasingly popular, understanding the nuances of charging</p>
+                    <a class="card-link" href="#">Read More</a>
+                </div>
+                <div class="card bg-gray-800 text-white p-6 rounded-lg shadow-lg hover-card">
+                    <i class="fas fa-solar-panel icon text-green-500"></i>
+                    <h3 class="card-title">Renewable Energy</h3>
+                    <p class="card-description">By understanding the various charging options and best practices, electric car</p>
+                    <a class="card-link" href="#">Read More</a>
+                </div>
+            </div>
+            <div class="flex justify-end mt-10">
+                <img src="https://via.placeholder.com/400" alt="Large Image" class="image-animate w-1/2 h-auto object-cover rounded-lg" />
+            </div>
+        </div>
+    </section>
+    <!-- Additional Content Section -->
+    <section class="bg-green-100 text-gray-900 py-12">
+        <div class="container mx-auto py-12 px-4">
+            <div class="flex flex-col lg:flex-row items-center lg:items-start">
+                <div class="lg:w-1/2 lg:pr-8">
+                    <div class="text-left">
+                        <h1 class="text-8xl font-bold text-gray-900">446+</h1>
+                        <p class="text-3xl text-gray-700">Public Stations In Pune City</p>
+                        <p class="mt-4 text-gray-600">Workplace charging not only supports employees who drive electric cars but also demonstrates a commitment to sustainability and environmental stewardship.</p>
+                    </div>
+                    <div class="mt-8">
+                        <img alt="Electric car charging plug" class="w-full" height="400" src="https://storage.googleapis.com/a1aa/image/a8QHjeZuo9hVK00oqUrbHeTrmkwUlJINTbhlVFi_BPI.jpg" width="600"/>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 grid grid-cols-1 md:grid-cols-2 gap-4 mt-12 lg:mt-0">
+                    <div class="bg-white text-gray-900 p-6 rounded-lg text-center hover-card-2">
+                        <img alt="Level 1 charging icon" class="mx-auto mb-4" src="https://equant.like-themes.com/wp-content/uploads/2024/04/charge-1.png"/>
+                        <h2 class="text-xl font-semibold">Level 1</h2>
+                        <p>Power: 35 kW</p>
+                        <p>Charging: 30 minutes</p>
+                    </div>
+                    <div class="bg-white text-gray-900 p-6 rounded-lg text-center hover-card-2">
+                        <img alt="Level 2 charging icon" class="mx-auto mb-4" src="https://equant.like-themes.com/wp-content/uploads/2024/04/charge-2.png"/>
+                        <h2 class="text-xl font-semibold">Level 2</h2>
+                        <p>Power: 45 kW</p>
+                        <p>Charging: 25 minutes</p>
+                    </div>
+                    <div class="bg-white text-gray-900 p-6 rounded-lg text-center hover-card-2">
+                        <img alt="Level 3 charging icon" class="mx-auto mb-4" src="https://equant.like-themes.com/wp-content/uploads/2024/04/charge-3.png"/>
+                        <h2 class="text-xl font-semibold">Level 3</h2>
+                        <p>Power: 50 kW</p>
+                        <p>Charging: 20 minutes</p>
+                    </div>
+                    <div class="bg-white text-gray-900 p-6 rounded-lg text-center hover-card-2">
+                        <img alt="Level 4 charging icon" class="mx-auto mb-4" src="https://equant.like-themes.com/wp-content/uploads/2024/04/charge-4-1.png"/>
+                        <h2 class="text-xl font-semibold">Level 4</h2>
+                        <p>Power: 65 kW</p>
+                        <p>Charging: 15 minutes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Additional Gradient Background Section -->
+    <section class="gradient-bg-alt text-white py-10">
+        <div class="container mx-auto">
+            <div class="text-center">
+                <p class="text-green-500 uppercase tracking-widest">Find Your Charging Station</p>
+                <h1 class="title">Locate the Nearest Charging Points</h1>
+                <p class="description">Use our platform to find the nearest electric vehicle charging stations. Whether you're at home, work, or on the go, we've got you covered.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+                <div class="card bg-gray-800 text-white p-6 rounded-lg shadow-lg hover-card">
+                    <i class="fas fa-map-marker-alt icon text-green-500"></i>
+                    <h3 class="card-title">Nearby Stations</h3>
+                    <p class="card-description">Quickly locate the nearest charging stations to your current location.</p>
+                </div>
+                <div class="card bg-gray-800 text-white p-6 rounded-lg shadow-lg hover-card">
+                    <i class="fas fa-route icon text-green-500"></i>
+                    <h3 class="card-title">Route Planning</h3>
+                    <p class="card-description">Plan your trips with ease by finding charging stations along your route.</p>
+                </div>
+                <div class="card bg-gray-800 text-white p-6 rounded-lg shadow-lg hover-card">
+                    <i class="fas fa-bolt icon text-green-500"></i>
+                    <h3 class="card-title">Fast Charging</h3>
+                    <p class="card-description">Find stations that offer fast charging to get you back on the road quickly.</p>
+                </div>
+                <div class="card bg-gray-800 text-white p-6 rounded-lg shadow-lg hover-card">
+                    <i class="fas fa-info-circle icon text-green-500"></i>
+                    <h3 class="card-title">Station Information</h3>
+                    <p class="card-description">Get detailed information about each charging station, including availability and pricing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Map Section -->
+    <section class="py-10">
+        <div class="container mx-auto">
+            <div class="text-center mb-10">
+                <h1 class="title">Map of Pune with Electric Vehicle Charging Stations</h1>
+                <p class="description">Use the map below to find all the electric vehicle charging stations in Pune. You can zoom in and out using Ctrl + mouse scroll.</p>
+            </div>
+            <div id="map"></div>
+        </div>
+    </section>
+    <!-- Customer Reviews Section -->
+    <div class="container mx-auto px-4 py-16">
+        <div class="mt-16">
+            <h2 class="text-3xl font-bold text-center text-green-500">Customer Reviews</h2>
+            <div class="mt-8 space-y-8">
+                <div class="bg-[#112233] p-6 rounded-lg review-card">
+                    <p class="text-lg font-semibold">Hamza Shah</p>
+                    <div class="flex items-center mt-2">
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                    </div>
+                    <p class="text-gray-400 mt-2">"The charging stations are top-notch and very reliable. Highly recommend!"</p>
+                </div>
+                <div class="bg-[#112233] p-6 rounded-lg review-card">
+                    <p class="text-lg font-semibold">Lokesh Amaraj</p>
+                    <div class="flex items-center mt-2">
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star-half-alt text-yellow-500"></i>
+                    </div>
+                    <p class="text-gray-400 mt-2">"Quick installations and excellent customer service. Couldn't be happier."</p>
+                </div>
+                <div class="bg-[#112233] p-6 rounded-lg review-card">
+                    <p class="text-lg font-semibold">Animesh Maurya</p>
+                    <div class="flex items-center mt-2">
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="far fa-star text-yellow-500"></i>
+                    </div>
+                    <p class="text-gray-400 mt-2">"Great accessories store with everything you need for your electric vehicle."</p>
+                </div>
+                <div class="bg-[#112233] p-6 rounded-lg review-card">
+                    <p class="text-lg font-semibold">Manoj Pagadala</p>
+                    <div class="flex items-center mt-2">
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                    </div>
+                    <p class="text-gray-400 mt-2">"The renewable energy options are fantastic. I feel good about my carbon footprint."</p>
+                </div>
+                <div class="bg-[#112233] p-6 rounded-lg review-card">
+                    <p class="text-lg font-semibold">Pranshu Patel</p>
+                    <div class="flex items-center mt-2">
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="far fa-star text-yellow-500"></i>
+                    </div>
+                    <p class="text-gray-400 mt-2">"Excellent service and support. The team is very knowledgeable and helpful."</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Leave a Review Section -->
+        <div class="mt-16">
+            <h2 class="text-3xl font-bold text-center text-green-500">Leave a Review</h2>
+            <form class="mt-8 max-w-xl mx-auto space-y-6">
+                <div>
+                    <label for="name" class="block text-lg font-semibold">Name</label>
+                    <input type="text" id="name" class="w-full mt-2 p-3 bg-[#112233] rounded-lg text-white" placeholder="Your Name">
+                </div>
+                <div>
+                    <label for="rating" class="block text-lg font-semibold">Rating</label>
+                    <select id="rating" class="w-full mt-2 p-3 bg-[#112233] rounded-lg text-white">
+                        <option value="5">5 - Excellent</option>
+                        <option value="4">4 - Very Good</option>
+                        <option value="3">3 - Good</option>
+                        <option value="2">2 - Fair</option>
+                        <option value="1">1 - Poor</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="review" class="block text-lg font-semibold">Review</label>
+                    <textarea id="review" class="w-full mt-2 p-3 bg-[#112233] rounded-lg text-white" rows="4" placeholder="Your Review"></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="bg-green-500 text-white px-6 py-3 rounded-lg font-semibold">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- About Plug Point Section -->
+    <div class="container mx-auto px-4 py-16">
+        <div class="mt-16 centered">
+            <h2 class="text-3xl font-bold text-green-500">About Plug Point</h2>
+            <p class="mt-4 text-gray-400">Plug Point is your go-to platform for all things related to electric vehicle (EV) charging stations. We are dedicated to making the transition to electric vehicles easier, more accessible, and sustainable for everyone. With our comprehensive and constantly updated directory, we help drivers find nearby EV stations, so they can power up and get back on the road with ease.</p>
+        </div>
+
+        <!-- Connect With Us Section -->
+        <div class="mt-16 centered">
+            <h2 class="text-3xl font-bold text-green-500">Connect With Us</h2>
+            <p class="mt-4 text-gray-400">Have questions or feedback? Feel free to reach out to us! We'd love to hear from you.</p>
+            <p class="mt-2 text-gray-400">📧 Email: support@plugpoint.com</p>
+            <p class="mt-2 text-gray-400">📱 Phone: 123-456-7890</p>
+        </div>
+
+        <!-- Powered by Clean Energy Section -->
+        <div class="mt-16 centered">
+            <p class="text-green-500 text-3xl font-bold">Powered by Clean Energy</p>
+            <p class="mt-4 text-gray-400">We are committed to supporting a cleaner and greener future. At Plug Point, we strive to make electric vehicle adoption a seamless part of your lifestyle, while promoting the use of renewable energy sources.</p>
+        </div>
+
+        <!-- Footer Section -->
+        <div class="mt-16 centered">
+            <p class="text-gray-400">© 2025 Plug Point. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
