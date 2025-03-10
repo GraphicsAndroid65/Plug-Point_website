@@ -46,6 +46,24 @@ This project was proudly developed by:
 - **Mangesh Choudhary**
 - **Sumit Kumar**
 
+🌟 Key Features:
+
+Find nearby charging stations with real-time location data.
+
+Secure payment options: Credit/Debit Card, Digital Wallet, and Bank Transfer.
+
+Interactive map powered by Google Maps API.
+
+User reviews and detailed station information.
+
+Responsive design for mobile and desktop.
+
+🌱 Mission:
+Plug Point is committed to promoting sustainable transportation by making EV charging more accessible and convenient for everyone.
+
+📧 Contact:
+For questions or feedback, reach out at GraphicsAnd65@gmail.com
+
 ## Acknowledgments
 
 We would like to thank our college and instructor for guiding us through the Web Technology subject and giving us the opportunity to learn by creating this project.
