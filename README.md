@@ -52,7 +52,7 @@ Find nearby charging stations with real-time location data.
 
 Secure payment options: Credit/Debit Card, Digital Wallet, and Bank Transfer.
 
-Interactive map powered by Google Maps API.
+Interactive map powered by OpenStreetMap.
 
 User reviews and detailed station information.
 
