@@ -1,16 +1,15 @@
 <html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0"/>
-  <title>
-   Payment - Electric Vehicle
-  </title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;family=Raleway:wght@700&amp;display=swap" rel="stylesheet"/>
-  <script src="https://cdn.tailwindcss.com">
-  </script>
-  <style>
-   .heading {
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0"/>
+    <title>Payment - Electric Vehicle</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Raleway:wght@700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="../style.css">
+    <script src="../script.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .heading {
             font-family: 'Raleway', sans-serif;
         }
 
@@ -128,286 +127,185 @@
             text-decoration: none;
             cursor: pointer;
         }
-  </style>
- </head>
- <body class="bg-gray-100 text-white">
-  <!-- Header -->
-  <header class="bg-black text-white w-full">
-   <div class="flex justify-between items-center py-4 px-6 w-full">
-    <div class="flex items-center space-x-3">
-     <img alt="Electric Vehicle Logo" height="50" src="https://storage.googleapis.com/a1aa/image/uCBxhX_HPgGe8rv2jy3hGKa1kjNptGeQL0vjy8BLj-A.jpg" width="50"/>
-     <span class="text-lg font-bold">
-      Plug Point
-     </span>
+    </style>
+</head>
+<body class="bg-gray-100 text-white">
+    <!-- Header -->
+    <header class="bg-black text-white w-full">
+        <div class="flex justify-between items-center py-4 px-6 w-full">
+            <div class="flex items-center space-x-3">
+                <img alt="Electric Vehicle Logo" height="50" src="https://storage.googleapis.com/a1aa/image/uCBxhX_HPgGe8rv2jy3hGKa1kjNptGeQL0vjy8BLj-A.jpg" width="50"/>
+                <span class="text-lg font-bold">Plug Point</span>
+            </div>
+            <nav class="hidden md:flex space-x-6 mx-auto">
+                <a class="text-white hover:text-green-500" href="#">Home</a>
+                <a class="text-white hover:text-green-500" href="bookings..html">Booking</a>
+                <a class="text-white hover:text-green-500" href="#">Find a Station</a>
+                <a class="text-white hover:text-green-500" href="#">Payment</a>
+                <a class="text-white hover:text-green-500" href="Links/aboutus.html">About Us</a>
+            </nav>
+            <a class="btn-animated" href="Links/signin.html">Sign In</a>
+        </div>
+    </header>
+    <!-- Payment Section -->
+    <section class="gradient-bg text-white py-10 relative">
+        <div class="absolute inset-0">
+            <img alt="Abstract background with dark and green colors" class="w-full h-full object-cover opacity-50" height="1080" src="https://storage.googleapis.com/a1aa/image/D5CBvfCxf9FNyYFhKCTAgRyxG--nNWkODNxaPMkwpN8.jpg" width="1920"/>
+        </div>
+        <div class="container mx-auto relative z-10">
+            <div class="text-center">
+                <p class="text-green-500 uppercase tracking-widest">Payment</p>
+                <h1 class="title">Secure Your Charging Session</h1>
+                <p class="description">Complete your payment to secure your charging session. We offer multiple payment options for your convenience.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+                <div class="card bg-gray-800 text-white p-6 rounded-lg shadow-lg hover-card" onclick="openModal('creditCardModal')">
+                    <i class="fas fa-credit-card icon text-green-500"></i>
+                    <h3 class="card-title">Credit/Debit Card</h3>
+                    <p class="card-description">Pay securely using your credit or debit card.</p>
+                    <a class="card-link" href="#">Pay Now</a>
+                </div>
+                <div class="card bg-gray-800 text-white p-6 rounded-lg shadow-lg hover-card" onclick="openModal('digitalWalletModal')">
+                    <i class="fas fa-wallet icon text-green-500"></i>
+                    <h3 class="card-title">Digital Wallet</h3>
+                    <p class="card-description">Use your favorite digital wallet for a quick payment.</p>
+                    <a class="card-link" href="#">Pay Now</a>
+                </div>
+                <div class="card bg-gray-800 text-white p-6 rounded-lg shadow-lg hover-card" onclick="openModal('bankTransferModal')">
+                    <i class="fas fa-university icon text-green-500"></i>
+                    <h3 class="card-title">Bank Transfer</h3>
+                    <p class="card-description">Transfer funds directly from your bank account.</p>
+                    <a class="card-link" href="#">Pay Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Payment Form Section -->
+    <section class="bg-gradient-to-r from-black via-gray-800 to-green-900 text-gray-100 py-12 w-full">
+        <div class="container mx-auto py-8 px-4">
+            <div class="text-center mb-8">
+                <h1 class="title">Complete Your Payment</h1>
+                <p class="description">Fill in the details below to complete your payment.</p>
+            </div>
+            <form class="max-w-xl mx-auto space-y-6">
+                <div>
+                    <label class="block text-lg font-semibold" for="name">Name on Card</label>
+                    <input class="w-full mt-2 p-3 bg-gray-200 rounded-lg text-gray-900" id="name" placeholder="John Doe" type="text"/>
+                </div>
+                <div>
+                    <label class="block text-lg font-semibold" for="card-number">Card Number</label>
+                    <input class="w-full mt-2 p-3 bg-gray-200 rounded-lg text-gray-900" id="card-number" placeholder="1234 5678 9012 3456" type="text"/>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-lg font-semibold" for="expiry-date">Expiry Date</label>
+                        <input class="w-full mt-2 p-3 bg-gray-200 rounded-lg text-gray-900" id="expiry-date" placeholder="MM/YY" type="text"/>
+                    </div>
+                    <div>
+                        <label class="block text-lg font-semibold" for="cvv">CVV</label>
+                        <input class="w-full mt-2 p-3 bg-gray-200 rounded-lg text-gray-900" id="cvv" placeholder="123" type="text"/>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button class="bg-green-500 text-white px-6 py-3 rounded-lg font-semibold" type="submit">Submit Payment</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- Footer Section -->
+    <footer class="bg-gradient-to-r from-black via-gray-800 to-green-900 text-gray-100 py-8 w-full">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8">
+                <h2 class="text-2xl font-bold">Contact Us</h2>
+                <p class="description">Have questions or need support? Reach out to us!</p>
+                <p class="mt-2">📧 Email: support@plugpoint.com</p>
+                <p class="mt-2">📱 Phone: 123-456-7890</p>
+            </div>
+            <div class="mt-8 centered">
+                <p class="text-gray-400">© 2025 Plug Point. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Modals -->
+    <div class="modal" id="creditCardModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('creditCardModal')">&times;</span>
+            <h2 class="text-2xl font-bold mb-4 text-green-500">Credit/Debit Card Payment</h2>
+            <form class="space-y-6">
+                <div>
+                    <label class="block text-lg font-semibold" for="cc-name">Name on Card</label>
+                    <input class="w-full mt-2 p-3 bg-gray-200 rounded-lg text-gray-900" id="cc-name" placeholder="John Doe" type="text"/>
+                </div>
+                <div>
+                    <label class="block text-lg font-semibold" for="cc-number">Card Number</label>
+                    <input class="w-full mt-2 p-3 bg-gray-200 rounded-lg text-gray-900" id="cc-number" placeholder="1234 5678 9012 3456" type="text"/>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-lg font-semibold" for="cc-expiry-date">Expiry Date</label>
+                        <input class="w-full mt-2 p-3 bg-gray-200 rounded-lg text-gray-900" id="cc-expiry-date" placeholder="MM/YY" type="text"/>
+                    </div>
+                    <div>
+                        <label class="block text-lg font-semibold" for="cc-cvv">CVV</label>
+                        <input class="w-full mt-2 p-3 bg-gray-200 rounded-lg text-gray-900" id="cc-cvv" placeholder="123" type="text"/>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button class="bg-green-500 text-white px-6 py-3 rounded-lg font-semibold" type="submit">Submit Payment</button>
+                </div>
+            </form>
+        </div>
     </div>
-    <nav class="hidden md:flex space-x-6 mx-auto">
-     <a class="text-white hover:text-green-500" href="#">
-      Home
-     </a>
-     <a class="text-white hover:text-green-500" href="#">
-      Booking
-     </a>
-     <a class="text-white hover:text-green-500" href="#">
-      Find a Station
-     </a>
-     <a class="text-white hover:text-green-500" href="#">
-      Payment
-     </a>
-     <a class="text-white hover:text-green-500" href="Links/aboutus.html">
-      About Us
-     </a>
-    </nav>
-    <a class="btn-animated" href="Links/signin.html">
-     Sign In
-    </a>
-   </div>
-  </header>
-  <!-- Payment Section -->
-  <section class="gradient-bg text-white py-10 relative">
-   <div class="absolute inset-0">
-    <img alt="Abstract background with dark and green colors" class="w-full h-full object-cover opacity-50" height="1080" src="https://storage.googleapis.com/a1aa/image/D5CBvfCxf9FNyYFhKCTAgRyxG--nNWkODNxaPMkwpN8.jpg" width="1920"/>
-   </div>
-   <div class="container mx-auto relative z-10">
-    <div class="text-center">
-     <p class="text-green-500 uppercase tracking-widest">
-      Payment
-     </p>
-     <h1 class="title">
-      Secure Your Charging Session
-     </h1>
-     <p class="description">
-      Complete your payment to secure your charging session. We offer multiple payment options for your convenience.
-     </p>
+    <div class="modal" id="digitalWalletModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('digitalWalletModal')">&times;</span>
+            <h2 class="text-2xl font-bold mb-4 text-green-500">Digital Wallet Payment</h2>
+            <form class="space-y-6">
+                <div>
+                    <label class="block text-lg font-semibold" for="wallet-name">Wallet Name</label>
+                    <input class="w-full mt-2 p-3 bg-gray-200 rounded-lg text-gray-900" id="wallet-name" placeholder="e.g., PayPal, Google Pay" type="text"/>
+                </div>
+                <div>
+                    <label class="block text-lg font-semibold" for="wallet-email">Email</label>
+                    <input class="w-full mt-2 p-3 bg-gray-200 rounded-lg text-gray-900" id="wallet-email" placeholder="your-email@example.com" type="email"/>
+                </div>
+                <div class="text-center">
+                    <button class="bg-green-500 text-white px-6 py-3 rounded-lg font-semibold" type="submit">Submit Payment</button>
+                </div>
+            </form>
+        </div>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
-     <div class="card bg-gray-800 text-white p-6 rounded-lg shadow-lg hover-card" onclick="openModal('creditCardModal')">
-      <i class="fas fa-credit-card icon text-green-500">
-      </i>
-      <h3 class="card-title">
-       Credit/Debit Card
-      </h3>
-      <p class="card-description">
-       Pay securely using your credit or debit card.
-      </p>
-      <a class="card-link" href="#">
-       Pay Now
-      </a>
-     </div>
-     <div class="card bg-gray-800 text-white p-6 rounded-lg shadow-lg hover-card" onclick="openModal('digitalWalletModal')">
-      <i class="fas fa-wallet icon text-green-500">
-      </i>
-      <h3 class="card-title">
-       Digital Wallet
-      </h3>
-      <p class="card-description">
-       Use your favorite digital wallet for a quick payment.
-      </p>
-      <a class="card-link" href="#">
-       Pay Now
-      </a>
-     </div>
-     <div class="card bg-gray-800 text-white p-6 rounded-lg shadow-lg hover-card" onclick="openModal('bankTransferModal')">
-      <i class="fas fa-university icon text-green-500">
-      </i>
-      <h3 class="card-title">
-       Bank Transfer
-      </h3>
-      <p class="card-description">
-       Transfer funds directly from your bank account.
-      </p>
-      <a class="card-link" href="#">
-       Pay Now
-      </a>
-     </div>
+    <div class="modal" id="bankTransferModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('bankTransferModal')">&times;</span>
+            <h2 class="text-2xl font-bold mb-4 text-green-500">Bank Transfer Payment</h2>
+            <form class="space-y-6">
+                <div>
+                    <label class="block text-lg font-semibold" for="bank-name">Bank Name</label>
+                    <input class="w-full mt-2 p-3 bg-gray-200 rounded-lg text-gray-900" id="bank-name" placeholder="Your Bank Name" type="text"/>
+                </div>
+                <div>
+                    <label class="block text-lg font-semibold" for="account-number">Account Number</label>
+                    <input class="w-full mt-2 p-3 bg-gray-200 rounded-lg text-gray-900" id="account-number" placeholder="123456789" type="text"/>
+                </div>
+                <div>
+                    <label class="block text-lg font-semibold" for="ifsc-code">IFSC Code</label>
+                    <input class="w-full mt-2 p-3 bg-gray-200 rounded-lg text-gray-900" id="ifsc-code" placeholder="IFSC1234" type="text"/>
+                </div>
+                <div class="text-center">
+                    <button class="bg-green-500 text-white px-6 py-3 rounded-lg font-semibold" type="submit">Submit Payment</button>
+                </div>
+            </form>
+        </div>
     </div>
-   </div>
-  </section>
-  <!-- Payment Form Section -->
-  <section class="bg-gradient-to-r from-black via-gray-800 to-green-900 text-gray-100 py-12 w-full">
-   <div class="container mx-auto py-8 px-4">
-    <div class="text-center mb-8">
-     <h1 class="title">
-      Complete Your Payment
-     </h1>
-     <p class="description">
-      Fill in the details below to complete your payment.
-     </p>
-    </div>
-    <form class="max-w-xl mx-auto space-y-6">
-     <div>
-      <label class="block text-lg font-semibold" for="name">
-       Name on Card
-      </label>
-      <input class="w-full mt-2 p-3 bg-gray-200 rounded-lg text-gray-900" id="name" placeholder="John Doe" type="text"/>
-     </div>
-     <div>
-      <label class="block text-lg font-semibold" for="card-number">
-       Card Number
-      </label>
-      <input class="w-full mt-2 p-3 bg-gray-200 rounded-lg text-gray-900" id="card-number" placeholder="1234 5678 9012 3456" type="text"/>
-     </div>
-     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-      <div>
-       <label class="block text-lg font-semibold" for="expiry-date">
-        Expiry Date
-       </label>
-       <input class="w-full mt-2 p-3 bg-gray-200 rounded-lg text-gray-900" id="expiry-date" placeholder="MM/YY" type="text"/>
-      </div>
-      <div>
-       <label class="block text-lg font-semibold" for="cvv">
-        CVV
-       </label>
-       <input class="w-full mt-2 p-3 bg-gray-200 rounded-lg text-gray-900" id="cvv" placeholder="123" type="text"/>
-      </div>
-     </div>
-     <div class="text-center">
-      <button class="bg-green-500 text-white px-6 py-3 rounded-lg font-semibold" type="submit">
-       Submit Payment
-      </button>
-     </div>
-    </form>
-   </div>
-  </section>
-  <!-- Footer Section -->
-  <footer class="bg-gradient-to-r from-black via-gray-800 to-green-900 text-gray-100 py-8 w-full">
-   <div class="container mx-auto px-4">
-    <div class="text-center mb-8">
-     <h2 class="text-2xl font-bold">
-      Contact Us
-     </h2>
-     <p class="description">
-      Have questions or need support? Reach out to us!
-     </p>
-     <p class="mt-2">
-      📧 Email: support@plugpoint.com
-     </p>
-     <p class="mt-2">
-      📱 Phone: 123-456-7890
-     </p>
-    </div>
-    <div class="mt-8 centered">
-     <p class="text-gray-400">
-      © 2025 Plug Point. All rights reserved.
-     </p>
-    </div>
-   </div>
-  </footer>
-  <!-- Modals -->
-  <div class="modal" id="creditCardModal">
-   <div class="modal-content">
-    <span class="close" onclick="closeModal('creditCardModal')">
-     &times;
-    </span>
-    <h2 class="text-2xl font-bold mb-4 text-green-500">
-     Credit/Debit Card Payment
-    </h2>
-    <form class="space-y-6">
-     <div>
-      <label class="block text-lg font-semibold" for="cc-name">
-       Name on Card
-      </label>
-      <input class="w-full mt-2 p-3 bg-gray-200 rounded-lg text-gray-900" id="cc-name" placeholder="John Doe" type="text"/>
-     </div>
-     <div>
-      <label class="block text-lg font-semibold" for="cc-number">
-       Card Number
-      </label>
-      <input class="w-full mt-2 p-3 bg-gray-200 rounded-lg text-gray-900" id="cc-number" placeholder="1234 5678 9012 3456" type="text"/>
-     </div>
-     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-      <div>
-       <label class="block text-lg font-semibold" for="cc-expiry-date">
-        Expiry Date
-       </label>
-       <input class="w-full mt-2 p-3 bg-gray-200 rounded-lg text-gray-900" id="cc-expiry-date" placeholder="MM/YY" type="text"/>
-      </div>
-      <div>
-       <label class="block text-lg font-semibold" for="cc-cvv">
-        CVV
-       </label>
-       <input class="w-full mt-2 p-3 bg-gray-200 rounded-lg text-gray-900" id="cc-cvv" placeholder="123" type="text"/>
-      </div>
-     </div>
-     <div class="text-center">
-      <button class="bg-green-500 text-white px-6 py-3 rounded-lg font-semibold" type="submit">
-       Submit Payment
-      </button>
-     </div>
-    </form>
-   </div>
-  </div>
-  <div class="modal" id="digitalWalletModal">
-   <div class="modal-content">
-    <span class="close" onclick="closeModal('digitalWalletModal')">
-     &times;
-    </span>
-    <h2 class="text-2xl font-bold mb-4 text-green-500">
-     Digital Wallet Payment
-    </h2>
-    <form class="space-y-6">
-     <div>
-      <label class="block text-lg font-semibold" for="wallet-name">
-       Wallet Name
-      </label>
-      <input class="w-full mt-2 p-3 bg-gray-200 rounded-lg text-gray-900" id="wallet-name" placeholder="e.g., PayPal, Google Pay" type="text"/>
-     </div>
-     <div>
-      <label class="block text-lg font-semibold" for="wallet-email">
-       Email
-      </label>
-      <input class="w-full mt-2 p-3 bg-gray-200 rounded-lg text-gray-900" id="wallet-email" placeholder="your-email@example.com" type="email"/>
-     </div>
-     <div class="text-center">
-      <button class="bg-green-500 text-white px-6 py-3 rounded-lg font-semibold" type="submit">
-       Submit Payment
-      </button>
-     </div>
-    </form>
-   </div>
-  </div>
-  <div class="modal" id="bankTransferModal">
-   <div class="modal-content">
-    <span class="close" onclick="closeModal('bankTransferModal')">
-     &times;
-    </span>
-    <h2 class="text-2xl font-bold mb-4 text-green-500">
-     Bank Transfer Payment
-    </h2>
-    <form class="space-y-6">
-     <div>
-      <label class="block text-lg font-semibold" for="bank-name">
-       Bank Name
-      </label>
-      <input class="w-full mt-2 p-3 bg-gray-200 rounded-lg text-gray-900" id="bank-name" placeholder="Your Bank Name" type="text"/>
-     </div>
-     <div>
-      <label class="block text-lg font-semibold" for="account-number">
-       Account Number
-      </label>
-      <input class="w-full mt-2 p-3 bg-gray-200 rounded-lg text-gray-900" id="account-number" placeholder="123456789" type="text"/>
-     </div>
-     <div>
-      <label class="block text-lg font-semibold" for="ifsc-code">
-       IFSC Code
-      </label>
-      <input class="w-full mt-2 p-3 bg-gray-200 rounded-lg text-gray-900" id="ifsc-code" placeholder="IFSC1234" type="text"/>
-     </div>
-     <div class="text-center">
-      <button class="bg-green-500 text-white px-6 py-3 rounded-lg font-semibold" type="submit">
-       Submit Payment
-      </button>
-     </div>
-    </form>
-   </div>
-  </div>
-  <script>
-   function openModal(modalId) {
+    <script>
+        function openModal(modalId) {
             document.getElementById(modalId).style.display = "block";
         }
 
         function closeModal(modalId) {
             document.getElementById(modalId).style.display = "none";
         }
-  </script>
- </body>
+    </script>
+</body>
 </html>

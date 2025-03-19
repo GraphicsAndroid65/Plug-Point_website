@@ -6,9 +6,21 @@
 }
 .gradient-bg {
     background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #00ff99 100%);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .gradient-bg-alt {
     background: linear-gradient(135deg, #1a1a1a 0%, #000000 50%, #00ff99 100%);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .title {
     font-family: 'Raleway', sans-serif;
@@ -134,13 +146,13 @@
 .image-container {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 92%; /* Adjust height to 92% to ensure both images are visible */
     overflow: hidden;
 }
 .image-container img {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 100%; /* Ensure images fill the container */
     object-fit: cover;
     opacity: 0;
     transition: opacity 1s ease-in-out;
@@ -171,4 +183,99 @@ body {
 }
 .image-animate:hover {
     transform: scale(1.1);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+#page1, .panel, .container {
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+}
+
+#center {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    padding: 3vw;
+    color: white;
+}
+
+#left {
+    width: 30vw;
+    font-size: 1.3vw;
+    line-height: 2vw;
+}
+
+#center h1 {
+    font-size: 6vw;
+    text-align: right;
+    line-height: 6vw;
+    color: white;
+}
+
+.panel_img h1 {
+    color: #4CAF50;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.con {
+    text-align: center;
+}
+
+button a {
+    width: 200px;
+    background-color: #405ff8;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button a:hover {
+    background-color: #154f68;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2rem; /* Adjust title size for smaller screens */
+    }
+    .description {
+        font-size: 0.9rem; /* Adjust description size for smaller screens */
+    }
+    .card-title {
+        font-size: 1rem; /* Adjust card title size for smaller screens */
+    }
+    .card-description {
+        font-size: 0.9rem; /* Adjust card description size for smaller screens */
+    }
+    .tagline {
+        font-size: 2rem; /* Adjust tagline size for smaller screens */
+    }
 }
