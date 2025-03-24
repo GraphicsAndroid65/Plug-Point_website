@@ -193,7 +193,7 @@ html, body {
 }
 
 #page1, .panel, .container {
-    min-height: 100vh;
+    min-height: auto;
     justify-content: center;
     align-items: center;
     background-size: cover;
@@ -278,4 +278,53 @@ footer {
     .tagline {
         font-size: 2rem; /* Adjust tagline size for smaller screens */
     }
+}
+
+/* New CSS Styles Added Here */
+body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-family: "IBM Plex Sans", sans-serif;
+}
+
+.big-text {
+    color: #00FF00;
+}
+
+.gradient-box {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    max-width: 22em;
+    position: relative;
+    padding: 0.75rem 2rem;
+    box-sizing: border-box;
+    border: 5px solid transparent;
+    color: #FFF;
+    background: #000;
+    background-clip: padding-box;
+    border-radius: 1em;
+    text-decoration: inherit;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.gradient-box:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -5px;
+    border-radius: inherit;
+    background: linear-gradient(to right, #00FF00, #00FFFF);
+}
+
+.gradient-box:hover {
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    transform: translateY(-5px);
+    color: #000;
 }

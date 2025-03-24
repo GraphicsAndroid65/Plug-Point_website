@@ -1,0 +1,385 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0"/>
+    <title>Booking - Plug Point</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Raleway:wght@700&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .heading {
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .heading.extra-large {
+            font-size: 4rem;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #00ff99 100%);
+        }
+
+        .gradient-bg-alt {
+            background: linear-gradient(135deg, #1a1a1a 0%, #000000 50%, #00ff99 100%);
+        }
+
+        .title {
+            font-family: 'Raleway', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .description {
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+
+        .card-title {
+            font-family: 'Raleway', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .card-description {
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card-link {
+            color: #00ff99;
+            font-size: 1rem;
+            margin-top: 1rem;
+            display: inline-block;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .tagline {
+            font-family: 'Raleway', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: right;
+        }
+
+        .hover-card {
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+        }
+
+        .hover-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 2px solid #00ff99;
+            transform: scale(0);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .hover-card:hover {
+            background-color: #1a202c; /* Tailwind's gray-900 */
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .hover-card:hover::before {
+            transform: scale(1);
+        }
+
+        .hover-card:hover .icon {
+            transform: scale(1.2);
+        }
+
+        .hover-card-2 {
+            transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+        }
+
+        .hover-card-2:hover {
+            background-color: #1a202c; /* Tailwind's gray-900 */
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .btn-animated {
+            background-color: #00ff99;
+            color: #000;
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        .btn-animated:hover {
+            background-color: #00cc7a;
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .slide-in-left {
+            animation: slideInLeft 2s ease-in-out;
+        }
+
+        @keyframes zoomIn {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.1);
+            }
+        }
+
+        .zoom-animation {
+            animation: zoomIn 5s ease-in-out forwards;
+        }
+
+        .image-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .image-container img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .image-container img.active {
+            opacity: 1;
+        }
+
+        #map {
+            width: 100%;
+            height: 500px;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0b1e2d, #0b3d4d);
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .review-card {
+            transition: transform 0.3s ease;
+        }
+
+        .review-card:hover {
+            transform: scale(1.05);
+        }
+
+        .centered {
+            text-align: center;
+        }
+
+        /* Animation for images */
+        .image-animate {
+            transition: transform 0.3s ease;
+        }
+
+        .image-animate:hover {
+            transform: scale(1.1);
+        }
+
+        /* New CSS for footer */
+        body {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            font-family: "IBM Plex Sans", sans-serif;
+        }
+
+        .big-text {
+            color: #00FF00;
+        }
+
+        .gradient-box {
+            display: flex;
+            align-items: center;
+            width: 90%;
+            margin: auto;
+            max-width: 22em;
+            position: relative;
+            padding: 0.75rem 2rem;
+            box-sizing: border-box;
+            border: 5px solid transparent;
+            color: #FFF;
+            background: #000;
+            background-clip: padding-box;
+            border-radius: 1em;
+            text-decoration: inherit;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .gradient-box:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            margin: -5px;
+            border-radius: inherit;
+            background: linear-gradient(to right, #00FF00, #00FFFF);
+        }
+
+        .gradient-box:hover {
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+            transform: translateY(-5px);
+            color: #000;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-white" style="background: linear-gradient(135deg, #0b1e2d, #0b3d4d);">
+    <!-- Header -->
+    <header class="bg-black text-white w-full">
+        <div class="flex justify-between items-center py-4 px-6 w-full">
+            <div class="flex items-center space-x-3">
+                <img alt="Electric Vehicle Logo" height="50" src="../Images/ev_logo.jpg" width="50"/>
+                <span class="text-lg font-bold">Plug Point</span>
+            </div>
+            <nav class="hidden md:flex space-x-6 mx-auto">
+                <a class="text-white hover:text-green-500" href="../index.html">Home</a>
+                <a class="text-white hover:text-green-500" href="booking.html">Booking</a>
+                <a class="text-white hover:text-green-500" href="find_station.html">Find a Station</a>
+                <a class="text-white hover:text-green-500" href="payment.html">Payment</a>
+                <a class="text-white hover:text-green-500" href="aboutus.html">About Us</a>
+            </nav>
+            <a class="btn-animated" href="signin.html">Sign In</a>
+        </div>
+    </header>
+    <!-- Booking Section -->
+    <section class="gradient-bg text-white py-10">
+        <div class="container mx-auto">
+            <div class="text-center">
+                <p class="text-green-500 uppercase tracking-widest">Electric vehicle</p>
+                <h1 class="title">Book Your Charging Slot</h1>
+                <p class="description">Reserve a charging slot at your nearest station to ensure your electric vehicle is always powered up and ready to go.</p>
+            </div>
+            <div class="mt-10 max-w-2xl mx-auto">
+                <form class="bg-gray-800 p-8 rounded-lg shadow-lg">
+                    <div class="mb-4">
+                        <label for="name" class="block text-lg font-semibold">Name</label>
+                        <input type="text" id="name" class="w-full mt-2 p-3 bg-gray-700 rounded-lg text-white" placeholder="Your Name">
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-lg font-semibold">Email</label>
+                        <input type="email" id="email" class="w-full mt-2 p-3 bg-gray-700 rounded-lg text-white" placeholder="Your Email">
+                    </div>
+                    <div class="mb-4">
+                        <label for="phone" class="block text-lg font-semibold">Phone</label>
+                        <input type="tel" id="phone" class="w-full mt-2 p-3 bg-gray-700 rounded-lg text-white" placeholder="Your Phone Number">
+                    </div>
+                    <div class="mb-4">
+                        <label for="station" class="block text-lg font-semibold">Select Station</label>
+                        <select id="station" class="w-full mt-2 p-3 bg-gray-700 rounded-lg text-white">
+                            <option value="station1">Station 1 - Downtown</option>
+                            <option value="station2">Station 2 - Uptown</option>
+                            <option value="station3">Station 3 - Suburbs</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label for="date" class="block text-lg font-semibold">Date</label>
+                        <input type="date" id="date" class="w-full mt-2 p-3 bg-gray-700 rounded-lg text-white">
+                    </div>
+                    <div class="mb-4">
+                        <label for="time" class="block text-lg font-semibold">Time</label>
+                        <input type="time" id="time" class="w-full mt-2 p-3 bg-gray-700 rounded-lg text-white">
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn-animated">Book Now</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="path/to/your/javascript/file.js"></script>
+    <main class="bg-black text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-8 md:mb-0">
+                    <p class="text-lg">WE'RE HERE TO HELP YOU WITH ALL YOUR EV CHARGING NEEDS!</p>
+                    <a class="text-lg underline" href="#">CONTACT US NOW</a>
+                    <p class="text-lg mt-4">📧 Email: mangeshchoudhary35@gmail.com</p>
+                    <p class="text-lg">sumitkumar65@gmail.com</p>
+                    <p class="text-lg mt-4">📱 Phone: 9801547689</p>
+                    <p class="text-lg">9637968391</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <img alt="Follow Us text with social media icons" class="mb-4" src="https://placehold.co/200x50?text=Follow+Us&amp;font=lobster&amp;bg=000&amp;fg=00FF00"/>
+                    <div class="flex space-x-4 mb-4">
+                        <a class="gradient-box" href="https://github.com/GraphicsAndroid65/Plug-Point_website">
+                            <i class="fab fa-github"></i> Github
+                        </a>
+                        <a class="gradient-box" href="https://www.instagram.com/sumittt_ydvv?igsh=MTRxMGZiNm03bmd5OA==">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                        <a class="gradient-box" href="https://www.youtube.com/@graphicsandroid65">
+                            <i class="fab fa-youtube"></i> Youtube
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <section class="bg-black text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4 big-text">About Plug Point</h2>
+            <p class="mb-4">
+                Plug Point is your go-to platform for all things related to electric vehicle (EV) charging stations. We are dedicated to making the transition to electric vehicles easier, more accessible, and sustainable for everyone. With our comprehensive and constantly updated directory, we help drivers find nearby EV stations, so they can power up and get back on the road with ease.
+            </p>
+            <div class="mt-16">
+                <h3 class="text-2xl font-bold mb-2 big-text">Powered by Clean Energy</h3>
+                <p>
+                    We are committed to supporting a cleaner and greener future. At Plug Point, we strive to make electric vehicle adoption a seamless part of your lifestyle, while promoting the use of renewable energy sources.
+                </p>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-black text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="text-center mt-8">
+                <p>© 2025 Plug Point. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
