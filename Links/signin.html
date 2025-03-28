@@ -197,8 +197,8 @@
             <form class="space-y-6">
                 <div class="rounded-md shadow-sm -space-y-px">
                     <div>
-                        <label class="sr-only" for="new-username">User name</label>
-                        <input autocomplete="username" class="appearance-none rounded-none relative block w-full px-3 py-2 input-field placeholder-gray-500 text-white rounded-t-md focus:outline-none focus:ring-green-500 focus:border-green-500 focus:z-10 sm:text-sm" id="new-username" name="username" placeholder="User name" required="" type="text"/>
+                        <label class="sr-only" for="new-username">User  name</label>
+                        <input autocomplete="username" class="appearance-none rounded-none relative block w-full px-3 py-2 input-field placeholder-gray-500 text-white rounded-t-md focus:outline-none focus:ring-green-500 focus:border-green-500 focus:z-10 sm:text-sm" id="new-username" name="username" placeholder="User  name" required="" type="text"/>
                     </div>
                     <div>
                         <label class="sr-only" for="new-email-address">Email address</label>
@@ -217,36 +217,57 @@
             </form>
         </div>
     </div>
-    <!-- Footer Section -->
-    <div class="w-full px-4 py-8 bg-gray-800 text-white">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="space-y-4">
-                <h3 class="text-xl font-bold text-green-500 section-title">About Plug Point</h3>
-                <p class="text-gray-400">Plug Point is your go-to platform for all things related to electric vehicle (EV) charging stations. We are dedicated to making the transition to electric vehicles easier, more accessible, and sustainable for everyone.</p>
-            </div>
-            <div class="space-y-4">
-                <h3 class="text-xl font-bold text-green-500 section-title">Quick Links</h3>
-                <ul class="space-y-2">
-                    <li><a class="text-gray-400 hover:text-green-500" href="#">Home</a></li>
-                    <li><a class="text-gray-400 hover:text-green-500" href="#">Booking</a></li>
-                    <li><a class="text-gray-400 hover:text-green-500" href="#">Find a Station</a></li>
-                    <li><a class="text-gray-400 hover:text-green-500" href="#">Payment</a></li>
-                    <li><a class="text-gray-400 hover:text-green-500" href="#">About Us</a></li>
-                </ul>
-            </div>
-            <div class="space-y-4">
-                <h3 class="text-xl font-bold text-green-500 section-title">Contact Us</h3>
-                <p class="text-gray-400">📧 Email: support@plugpoint.com</p>
-                <p class="text-gray-400">📱 Phone: 123-456-7890</p>
-                <div class="flex space-x-4">
-                    <a class="text-gray-400 hover:text-green-500 flex items-center" href="#"><i class="fab fa-github"></i><span class="ml-2">GitHub</span></a>
+    <!-- Main Section with Contact Info and About Plug Point -->
+    <main class="bg-black text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-8 md:mb-0">
+                    <p class="text-lg">WE'RE HERE TO HELP YOU WITH ALL YOUR EV CHARGING NEEDS!</p>
+                    <a class="text-lg underline" href="#">CONTACT US NOW</a>
+                    <p class="text-lg mt-4">📧 Email: mangeshchoudhary35@gmail.com</p>
+                    <pre class="text-lg">        sumitkr9950@gmail.com</pre>
+                    <p class="text-lg mt-4">📱 Phone: 9801547689</p>
+                    <pre class="text-lg">        9637968391</pre>
+                </div>
+                <div class="flex flex-col items-center">
+                    <img alt="Follow Us text with social media icons" class="mb-4" height="80" src="./../Images/follow us.png" width="250"/>
+                    <div class="flex space-x-4 mb-4">
+                        <a class="gradient-box" href="https://github.com/GraphicsAndroid65/Plug-Point_website">
+                            <i class="fab fa-github"></i> Github
+                        </a>
+                        <a class="gradient-box" href="https://www.instagram.com/sumittt_ydvv?igsh=MTRxMGZiNm03bmd5OA==">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                        <a class="gradient-box" href="https://www.youtube.com/@graphicsandroid65">
+                            <i class="fab fa-youtube"></i> Youtube
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="mt-8 centered">
-            <p class="text-gray-400">© 2025 Plug Point. All rights reserved.</p>
+    </main>
+    <section class="bg-black text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4 big-text">About Plug Point</h2>
+            <p class="mb-4">
+                Plug Point is your go-to platform for all things related to electric vehicle (EV) charging stations. We are dedicated to making the transition to electric vehicles easier, more accessible, and sustainable for everyone. With our comprehensive and constantly updated directory, we help drivers find nearby EV stations, so they can power up and get back on the road with ease.
+            </p>
+            <div class ="mt-16">
+                <h3 class="text-2xl font-bold mb-2 big-text">Powered by Clean Energy</h3>
+                <p>
+                    We are committed to supporting a cleaner and greener future. At Plug Point, we strive to make electric vehicle adoption a seamless part of your lifestyle, while promoting the use of renewable energy sources.
+                </p>
+            </div>
         </div>
-    </div>
+    </section>
+    <!-- Footer Section -->
+    <footer class="bg-black text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="text-center mt-8">
+                <p>© 2025 Plug Point. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
     <script>
         document.getElementById('create-account-link').addEventListener('click', function() {
             document.getElementById('create-account-modal').classList.remove('hidden');

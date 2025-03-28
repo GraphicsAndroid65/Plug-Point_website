@@ -132,7 +132,7 @@
 <body class="bg-gray-100 text-white">
     <!-- Header -->
     <header class="bg-black text-white w-full">
-        <div class="flex justify-between items-center py-4 px-6 w-full">
+        <div class=" flex justify-between items-center py-4 px-6 w-full">
             <div class="flex items-center space-x-3">
                 <img alt="Electric Vehicle Logo" height="50" src="../Images/ev_logo.jpg" width="50"/>
                 <span class="text-lg font-bold">Plug Point</span>
@@ -148,9 +148,9 @@
         </div>
     </header>
     <!-- Payment Section -->
-    <section class="gradient-bg text-white py-10 relative">
+    <section class="gradient-bg text-white py-10 relative" style="height: 100vh;">
         <div class="absolute inset-0">
-            <img alt="Abstract background with dark and green colors" class="w-full h-full object-cover opacity-50" height="1080" src="../Images/payment_backgroud.jpg" width="1920"/>
+            <img alt="Abstract background with dark and green colors" class="w-full h-full object-cover opacity-50" height="1080" src="./../Images/money.jpg" width="1920"/>
         </div>
         <div class="container mx-auto relative z-10">
             <div class="text-center">
@@ -190,7 +190,7 @@
             <form class="max-w-xl mx-auto space-y-6">
                 <div>
                     <label class="block text-lg font-semibold" for="name">Name on Card</label>
-                    <input class="w-full mt-2 p-3 bg-gray-200 rounded-lg text-gray-900" id="name" placeholder="John Doe" type="text"/>
+                    <input class="w-full mt-2 p-3 bg-gray-200 rounded-lg text-gray-900" id="name" placeholder="Name" type="text"/>
                 </div>
                 <div>
                     <label class="block text-lg font-semibold" for="card-number">Card Number</label>
@@ -212,17 +212,54 @@
             </form>
         </div>
     </section>
-    <!-- Footer Section -->
-    <footer class="bg-gradient-to-r from-black via-gray-800 to-green-900 text-gray-100 py-8 w-full">
+    <!-- Main Section with Contact Info and About Plug Point -->
+    <main class="bg-black text-white py-16">
         <div class="container mx-auto px-4">
-            <div class="text-center mb-8">
-                <h2 class="text-2xl font-bold">Contact Us</h2>
-                <p class="description">Have questions or need support? Reach out to us!</p>
-                <p class="mt-2">📧 Email: support@plugpoint.com</p>
-                <p class="mt-2">📱 Phone: 123-456-7890</p>
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-8 md:mb-0">
+                    <p class="text-lg">WE'RE HERE TO HELP YOU WITH ALL YOUR EV CHARGING NEEDS!</p>
+                    <a class="text-lg underline" href="#">CONTACT US NOW</a>
+                    <p class="text-lg mt-4">📧 Email: mangeshchoudhary35@gmail.com</p>
+                    <pre class="text-lg">        sumitkr9950@gmail.com</pre>
+                    <p class="text-lg mt-4">📱 Phone: 9801547689</p>
+                    <pre class="text-lg">        9637968391</pre>
+                </div>
+                <div class="flex flex-col items-center">
+                    <img alt="Follow Us text with social media icons" class="mb-4" height="80" src="./../Images/follow us.png" width="250"/>
+                    <div class="flex space-x-4 mb-4">
+                        <a class="gradient-box" href="https://github.com/GraphicsAndroid65/Plug-Point_website">
+                            <i class="fab fa-github"></i> Github
+                        </a>
+                        <a class="gradient-box" href="https://www.instagram.com/sumittt_ydvv?igsh=MTRxMGZiNm03bmd5OA==">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                        <a class="gradient-box" href="https://www.youtube.com/@graphicsandroid65">
+                            <i class="fab fa-youtube"></i> Youtube
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="mt-8 centered">
-                <p class="text-gray-400">© 2025 Plug Point. All rights reserved.</p>
+        </div>
+    </main>
+    <section class="bg-black text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4 big-text">About Plug Point</h2>
+            <p class="mb-4">
+                Plug Point is your go-to platform for all things related to electric vehicle (EV) charging stations. We are dedicated to making the transition to electric vehicles easier, more accessible, and sustainable for everyone. With our comprehensive and constantly updated directory, we help drivers find nearby EV stations, so they can power up and get back on the road with ease.
+            </p>
+            <div class="mt-16">
+                <h3 class="text-2xl font-bold mb-2 big-text">Powered by Clean Energy</h3>
+                <p>
+                    We are committed to supporting a cleaner and greener future. At Plug Point, we strive to make electric vehicle adoption a seamless part of your lifestyle, while promoting the use of renewable energy sources.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Section -->
+    <footer class="bg-black text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="text-center mt-8">
+                <p>© 2025 Plug Point. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -234,7 +271,7 @@
             <form class="space-y-6">
                 <div>
                     <label class="block text-lg font-semibold" for="cc-name">Name on Card</label>
-                    <input class="w-full mt-2 p-3 bg-gray-200 rounded-lg text-gray-900" id="cc-name" placeholder="John Doe" type="text"/>
+                    <input class=" w-full mt-2 p-3 bg-gray-200 rounded-lg text-gray-900" id="cc-name" placeholder="Your Name" type="text"/>
                 </div>
                 <div>
                     <label class="block text-lg font-semibold" for="cc-number">Card Number</label>

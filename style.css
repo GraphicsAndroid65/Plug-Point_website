@@ -6,7 +6,7 @@
 }
 .gradient-bg {
     background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #00ff99 100%);
-    height: 100vh;
+    height: 80vh; /* Changed back to 100vh */
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -30,16 +30,22 @@
 .description {
     font-family: 'Inter', sans-serif;
     font-size: 1rem;
-    margin-top: 1rem;
+    margin-top: 0.2rem; /* Further reduced margin to minimize extra spacing */
+}
+.card {
+    background-color: #1a202c; /* Tailwind's gray-900 */
+    padding: 2rem; /* Increased padding for cards */
+    border-radius: 0.5rem; /* Added border radius for rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow for depth */
 }
 .card-title {
     font-family: 'Raleway', sans-serif;
-    font-size: 1.25rem;
+    font-size: 1.5rem; /* Increased card title size */
     font-weight: 700;
 }
 .card-description {
     font-family: 'Inter', sans-serif;
-    font-size: 1rem;
+    font-size: 1.25rem; /* Increased card description size */
     margin-top: 0.5rem;
 }
 .icon {
@@ -280,7 +286,6 @@ footer {
     }
 }
 
-/* New CSS Styles Added Here */
 body {
     background-color: #1a1a1a;
     color: #ffffff;
@@ -324,6 +329,8 @@ body {
 }
 
 .gradient-box:hover {
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    transform: translateY(-5px);
     box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
     transform: translateY(-5px);
     color: #000;
